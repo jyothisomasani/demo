@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .card {
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            width: 100%;
+        }
+
+        .mt-4 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <div class="card">
+            <h1>Registration Form</h1>
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control"
+                        id="name" placeholder="Enter Name">
+                </div>
+
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}"
+                        class="form-control" id="address" placeholder="Enter Address">
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <input type="text" [(ngModel)]="mobile" [ngModelOptions]="{standalone: true}" class="form-control"
+                        id="mobile" placeholder="Enter Mobile">
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-4" (click)="save()">Submit</button>
+                
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
